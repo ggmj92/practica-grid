@@ -4,51 +4,52 @@
 }
 
 img {
-    width: 100%
+    width: 100%;
 }
 
 .body {
-    font-size: 100%
+    font-size: 2em;
+
 }
 
 .grid-item1 {
     grid-area: header;
     border-style: solid;
-    margin: 10px 20px 10px 20px;
+    /* margin: 10px 20px 10px 20px; */
 }
 
 .grid-item2 {
     grid-area: main;
     border-style: solid;
-    margin: 10px 20px 10px 10px;
+    /* margin: 10px 20px 10px 10px; */
 }
 
 .grid-item3 {
     grid-area: widget1;
     border-style: solid;
-    margin: 10px 10px 10px 10px;
+    /* margin: 10px 10px 10px 10px; */
 }
 
 .grid-item4 {
     grid-area: widget2;
     border-style: solid;
-    margin: 10px 20px 10px 10px;
+    /* margin: 10px 20px 10px 10px; */
 }
 
 .grid-item5 {
     grid-area: publicidad;
     border-style: solid;
-    margin: 10px 10px 10px 20px;
+    /* margin: 10px 10px 10px 20px; */
 }
 
 .grid-item6 {
     grid-area: footer;
     border-style: solid;
-    margin: 10px 20px 10px 20px;
+    /* margin: 10px 20px 10px 20px; */
     padding: 50px;
 }
 
-/* .gridContainer {
+.gridContainer {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -58,7 +59,8 @@ img {
         "publicidad main main"
         "publicidad widget1 widget2"
         "footer footer footer";
-} */
+    gap: 10px;
+}
 
 .flexContainer {
     display: flex;
@@ -84,7 +86,7 @@ img {
 
 @media screen and (min-width: 768px) {
     .flexContainer>* {
-        width: calc(100% - 20px);
+        width: calc(80% - 20px);
         flex-direction: column;
     }
 
