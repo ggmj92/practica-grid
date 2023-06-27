@@ -7,42 +7,49 @@ img {
     width: 100%;
 }
 
-.body {
-    font-size: 2em;
+body {
+    font-size: 1em;
 
 }
 
-.grid-item1 {
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* GRID ITEMS */
+
+.header {
     grid-area: header;
     border-style: solid;
     /* margin: 10px 20px 10px 20px; */
 }
 
-.grid-item2 {
+.main {
     grid-area: main;
     border-style: solid;
     /* margin: 10px 20px 10px 10px; */
 }
 
-.grid-item3 {
+.widget1 {
     grid-area: widget1;
     border-style: solid;
     /* margin: 10px 10px 10px 10px; */
 }
 
-.grid-item4 {
+.widget2 {
     grid-area: widget2;
     border-style: solid;
     /* margin: 10px 20px 10px 10px; */
 }
 
-.grid-item5 {
+.publicidad {
     grid-area: publicidad;
     border-style: solid;
     /* margin: 10px 10px 10px 20px; */
 }
 
-.grid-item6 {
+.footer {
     grid-area: footer;
     border-style: solid;
     /* margin: 10px 20px 10px 20px; */
@@ -52,13 +59,13 @@ img {
 .gridContainer {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-        "header header header"
-        "publicidad main main"
-        "publicidad widget1 widget2"
-        "footer footer footer";
+        "header header"
+        "main main"
+        "publicidad publicidad"
+        "widget1 widget2"
+        "footer footer";
     gap: 10px;
 }
 
@@ -85,15 +92,18 @@ img {
 
 
 @media screen and (min-width: 768px) {
+
+    .container {
+        width: 90%;
+    }
+
     .flexContainer>* {
         width: calc(80% - 20px);
         flex-direction: column;
     }
 
     .gridContainer {
-        width: 100%;
         display: grid;
-        grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
         grid-template-areas:
             "header header"
@@ -105,14 +115,17 @@ img {
 }
 
 @media screen and (min-width: 992px) {
+
+    .container {
+        width: 80%;
+    }
+
     .flexContainer>* {
         width: calc(50% - 20px);
     }
 
     .gridContainer {
-        width: 100%;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
         grid-template-areas:
             "header header header"
@@ -128,9 +141,7 @@ img {
     }
 
     .gridContainer {
-        width: 100%;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
         grid-template-areas:
             "header header header"
